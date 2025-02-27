@@ -45,7 +45,7 @@ The `theme` section controls all visual aspects of your course. Here's what each
     "text": "#2F3437",          // Regular text color
     "correct": "#0F7B6C",       // Color for correct answers in quiz
     "incorrect": "#E03E3E",     // Color for incorrect answers in quiz
-    "title": "#2F3437",         // Color for slide titles
+    "title": "#2F3437",         // Color for course titles
     "sidebar": "#F7F6F3",       // Sidebar background color
     "card": "#FFFFFF"           // Content card background color
 }
