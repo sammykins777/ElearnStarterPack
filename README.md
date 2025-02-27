@@ -7,7 +7,7 @@ This template's a lightweight, realistic tool for short onboarding or training c
 
 ## Features
 - **Flexible Content**: Add slides with text, images, videos, checklists, or quotes via `config.json`.
-- **Custom Theming**: Control all colors (`primary`, `text`, `correct`, etc.), header gradient, sidebar/card backgrounds, and font size—match your brand easily, including dark looks.
+- **Custom Theming**: Control all colors (`primary`, `text`, `correct`, etc.), header gradient, sidebar/card backgrounds, and font size—match your brand easily, including dark looks. 
 - **SCORM Ready**: Tracks progress and quiz scores—works with e-learning platforms out of the box.
 - **Responsive**: Looks good on mobile or desktop—buttons and layouts adjust automatically.
 - **Smooth Loading**: Shows a "Loading" screen until ready—no flash of default styles.

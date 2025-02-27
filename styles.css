@@ -13,6 +13,10 @@
     --bs-sidebar: #ffffff;
     --bs-card: #ffffff;
     --bs-primary-hover: #1a1e20;
+    /* Spacing variables */
+    --spacing-unit: 16px;
+    --card-padding: calc(var(--spacing-unit) * 2); /* 32px */
+    --content-width: 800px; /* Matches video layout */
 }
 
 * {
@@ -20,6 +24,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/* Utility classes */
+.mb-1 { margin-bottom: var(--spacing-unit); }
+.mb-2 { margin-bottom: calc(var(--spacing-unit) * 1.5); } /* 24px */
+.py-2 { padding-top: calc(var(--spacing-unit) * 2); padding-bottom: calc(var(--spacing-unit) * 2); }
 
 /* Loading screen */
 #loading {
@@ -59,7 +68,7 @@ body {
 
 .content-wrapper {
     flex-grow: 1;
-    padding: 20px;
+    padding: calc(var(--spacing-unit) * 2); /* 32px */
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -70,8 +79,8 @@ header {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     text-align: center;
-    padding: 15px;
-    margin-bottom: 20px;
+    padding: calc(var(--spacing-unit) * 1.5); /* 24px */
+    margin-bottom: calc(var(--spacing-unit) * 2); /* 32px */
 }
 
 header h1 {
@@ -83,46 +92,59 @@ header h1 {
 
 /* Sidebar */
 .sidebar {
-    min-width: 200px;
+    min-width: 250px;
     height: 100vh;
     overflow-y: auto;
     background: var(--bs-sidebar);
     border-right: 1px solid var(--bs-secondary);
-    padding: 15px;
+    padding: calc(var(--spacing-unit) * 2) 0; /* 32px top/bottom, 0 left/right */
+    margin-left: 0; /* Flush with edge */
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing-unit) * 0.5); /* 8px between items */
 }
 
 .sidebar button {
-    display: block;
     width: 100%;
     text-align: left;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     color: var(--bs-text);
     border: none;
-    padding: 10px 15px;
+    padding: calc(var(--spacing-unit) * 0.75) var(--spacing-unit) calc(var(--spacing-unit) * 0.75) calc(var(--spacing-unit) * 2); /* 12px top, 16px right, 12px bottom, 32px left */
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: background-color 0.2s ease;
     font-size: var(--base-font-size);
     background: none;
+    border-radius: 4px;
 }
 
-.sidebar button:hover,
+.sidebar button:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
 .sidebar button.active {
-    background-color: var(--bs-background);
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 /* Slide container */
 .slide-container {
     background: var(--bs-card);
-    border-left: 4px solid var(--bs-secondary);
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    padding: 20px;
+    padding: var(--card-padding); /* 32px */
     transition: opacity 0.3s ease;
+    margin-bottom: calc(var(--spacing-unit) * 2); /* 32px */
 }
 
 .slide-content {
-    margin-bottom: 15px;
+    max-width: var(--content-width); /* 800px, matches video */
+    margin: 0 auto;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--spacing-unit); /* 16px between elements */
 }
 
 .slide-content p {
@@ -135,54 +157,57 @@ header h1 {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     color: var(--bs-text);
-    margin-bottom: 15px;
+    margin-bottom: calc(var(--spacing-unit) * 1.5); /* 24px */
     font-size: calc(var(--base-font-size) * 1.333);
 }
 
 .slide-content img {
-    max-width: 50%; /* Caps width, responsive */
+    max-width: 50%;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    display: block; /* Enables centering */
-    margin: 0 auto; /* Centers horizontally */
+    display: block;
+    margin: 0 auto;
 }
 
 .slide-content .caption {
     font-style: italic;
     color: var(--bs-text);
-    margin-top: 10px;
+    margin-top: var(--spacing-unit); /* 16px */
     font-size: calc(var(--base-font-size) * 0.875);
+    text-align: center;
 }
 
 .slide-content .checklist {
     list-style: none;
     text-align: left;
-    max-width: 600px;
+    max-width: var(--content-width);
     margin: 0 auto;
 }
 
 .slide-content .checklist li {
     display: flex;
     align-items: center;
-    padding: 10px;
+    padding: var(--spacing-unit); /* 16px */
     font-size: var(--base-font-size);
     color: var(--bs-text);
     background: var(--bs-background);
-    margin-bottom: 5px;
+    margin-bottom: calc(var(--spacing-unit) * 0.5); /* 8px */
     border-radius: 5px;
 }
 
 .slide-content .checklist li::before {
     content: "✔";
     color: var(--bs-secondary);
-    margin-right: 10px;
+    margin-right: var(--spacing-unit); /* 16px */
 }
 
 .slide-content .image-text {
     display: flex;
-    gap: 20px;
+    gap: calc(var(--spacing-unit) * 2); /* 32px */
     align-items: center;
+    max-width: var(--content-width);
+    margin: 0 auto;
 }
 
 .slide-content .image-text img {
@@ -202,19 +227,19 @@ header h1 {
     font-style: italic;
     color: var(--bs-text);
     border-left: 4px solid var(--bs-secondary);
-    padding-left: 20px;
+    padding-left: calc(var(--spacing-unit) * 1.5); /* 24px */
 }
 
 .slide-content .quote cite {
     display: block;
     font-size: calc(var(--base-font-size) * 0.875);
     color: var(--bs-text);
-    margin-top: 10px;
+    margin-top: var(--spacing-unit); /* 16px */
     font-style: normal;
 }
 
 .slide-content .video-container {
-    max-width: 800px;
+    max-width: var(--content-width);
     margin: 0 auto;
 }
 
@@ -226,7 +251,7 @@ header h1 {
 }
 
 .slide-content .video-container p {
-    margin-top: 15px;
+    margin-top: calc(var(--spacing-unit) * 1.5); /* 24px */
     color: var(--bs-text);
     font-size: var(--base-font-size);
 }
@@ -235,20 +260,22 @@ header h1 {
 .navigation {
     display: flex;
     justify-content: space-between;
+    margin-top: calc(var(--spacing-unit) * 2); /* 32px */
 }
 
 /* Quiz */
 .quiz-container {
     background: var(--bs-card);
-    border-left: 4px solid var(--bs-secondary); /* This is the line to remove if you want */
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    padding: 20px;
-    margin-top: 20px;
+    padding: var(--card-padding); /* 32px */
+    margin-top: calc(var(--spacing-unit) * 2); /* 32px */
 }
 
 .quiz-content {
     text-align: center;
+    max-width: var(--content-width);
+    margin: 0 auto;
 }
 
 .quiz-title {
@@ -256,34 +283,34 @@ header h1 {
     font-weight: 600;
     color: var(--bs-text);
     font-size: calc(var(--base-font-size) * 1.333);
-    margin-bottom: 10px;
+    margin-bottom: var(--spacing-unit); /* 16px */
 }
 
 .quiz-question {
     font-size: calc(var(--base-font-size) * 1.125);
     color: var(--bs-text);
-    margin-bottom: 15px;
+    margin-bottom: calc(var(--spacing-unit) * 1.5); /* 24px */
 }
 
 .quiz-options {
-    margin-bottom: 15px;
+    margin-bottom: calc(var(--spacing-unit) * 1.5); /* 24px */
     text-align: left;
-    padding: 15px;
-    border: none; /* Removes default fieldset border */
+    padding: var(--spacing-unit); /* 16px */
+    border: none;
 }
 
 .quiz-options label {
     display: block;
-    margin: 10px 0;
+    margin: calc(var(--spacing-unit) * 0.5) 0; /* 8px vertical */
     font-size: var(--base-font-size);
     color: var(--bs-text);
 }
 
 .quiz-feedback {
     font-size: calc(var(--base-font-size) * 0.9375);
-    padding: 10px;
+    padding: var(--spacing-unit); /* 16px */
     border-radius: 5px;
-    margin-bottom: 15px;
+    margin-bottom: calc(var(--spacing-unit) * 1.5); /* 24px */
 }
 
 .quiz-feedback.correct {
@@ -297,7 +324,7 @@ header h1 {
 }
 
 .quiz-feedback.neutral {
-    background-color: #ffffff;
+    background-color: var(--bs-card);
     color: var(--bs-text);
 }
 
@@ -310,7 +337,7 @@ header h1 {
     border: 1px solid var(--bs-primary);
     color: white;
     border-radius: 6px;
-    padding: 8px 16px;
+    padding: calc(var(--spacing-unit) * 0.5) var(--spacing-unit); /* 8px 16px */
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     font-size: var(--base-font-size);
@@ -351,17 +378,22 @@ header h1 {
 }
 
 .mt-3 {
-    margin-top: 15px;
+    margin-top: calc(var(--spacing-unit) * 2); /* 32px */
 }
 
 /* Responsive */
 @media (max-width: 576px) {
+    :root {
+        --spacing-unit: 12px;
+        --card-padding: calc(var(--spacing-unit) * 2); /* 24px */
+    }
+
     .app-wrapper {
         flex-direction: column;
     }
 
     .content-wrapper {
-        padding: 10px;
+        padding: var(--spacing-unit); /* 12px */
     }
 
     header h1 {
@@ -381,13 +413,18 @@ header h1 {
         font-size: calc(var(--base-font-size) * 1.25);
     }
 
-    .slide-content .image-text {
-        flex-direction: column;
-        gap: 10px;
+    .slide-content {
+        min-height: 200px;
     }
 
+    .slide-content img,
     .slide-content .image-text img {
         max-width: 100%;
+    }
+
+    .slide-content .image-text {
+        flex-direction: column;
+        gap: var(--spacing-unit); /* 12px */
     }
 
     .slide-content .quote {
@@ -400,7 +437,7 @@ header h1 {
 
     .navigation {
         flex-direction: column;
-        gap: 10px;
+        gap: var(--spacing-unit); /* 12px */
     }
 
     .btn-prev,
@@ -408,15 +445,21 @@ header h1 {
     .btn-submit,
     .btn-exit {
         width: 100%;
-        margin-bottom: 10px;
+        margin-bottom: var(--spacing-unit); /* 12px */
     }
 
     .sidebar {
         position: fixed;
         z-index: 1000;
         width: 200px;
+        padding: calc(var(--spacing-unit) * 2) 0; /* 24px top/bottom, 0 left/right */
+        margin-left: 0;
         transform: translateX(-100%);
         transition: transform 0.3s ease;
+    }
+
+    .sidebar button {
+        padding: calc(var(--spacing-unit) * 0.75) var(--spacing-unit) calc(var(--spacing-unit) * 0.75) calc(var(--spacing-unit) * 2); /* 9px top, 12px right, 9px bottom, 24px left */
     }
 
     .sidebar.active {
