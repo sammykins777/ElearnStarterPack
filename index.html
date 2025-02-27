@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnForge Starter Template</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="loading">Loading</div> <!-- Loading screen -->
+    <div class="app-wrapper">
+        <nav id="sidebar" class="sidebar hidden" aria-label="Course Navigation">
+            <!-- Slide links populated by script.js -->
+        </nav>
+
+        <div class="content-wrapper">
+            <header>
+                <h1 id="course-title">Loading...</h1>
+            </header>
+
+            <main id="slide-container" class="slide-container" aria-label="Course Content">
+                <div class="slide-content" id="slide-content" role="region" aria-live="polite"></div>
+                <div class="navigation">
+                    <button id="prev-btn" class="btn-prev" disabled aria-label="Previous Slide">Previous</button>
+                    <button id="next-btn" class="btn-next" aria-label="Next Slide">Next</button>
+                </div>
+            </main>
+
+            <section id="quiz-container" class="quiz-container hidden" aria-label="Quiz">
+                <div class="quiz-content">
+                    <h2 class="quiz-title">Quiz Time!</h2>
+                    <p id="quiz-question" class="quiz-question"></p>
+                    <fieldset id="quiz-options" class="quiz-options" aria-labelledby="quiz-question"></fieldset>
+                    <div id="quiz-feedback" class="quiz-feedback" role="alert" aria-live="polite"></div>
+                    <button id="submit-quiz" class="btn-submit" aria-label="Submit Answer">Submit</button>
+                    <button id="exit-btn" class="btn-exit hidden" aria-label="Exit Course">Exit Course</button>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="SCORM_API_wrapper.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

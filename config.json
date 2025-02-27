@@ -1,0 +1,34 @@
+{
+    "title": "Employee Onboarding: Welcome to Horizon Corp",
+   "theme": {
+    "primary": "#7C3AED",
+    "secondary": "#A78BFA",
+    "gradientStart": "#1E1E1E",
+    "gradientEnd": "#2D2D2D",
+    "background": "#121212",
+    "text": "#E2E2E2",
+    "correct": "#34D399",
+    "incorrect": "#F87171",
+    "title": "#CDB4DB",
+    "sidebar": "#1A1A1A",
+    "card": "#2D2D2D"
+},
+    "fontSize": "1.25rem",
+    "sidebar": true,
+    "slides": [
+        {"type": "text", "title": "Welcome to Horizon Corp", "content": "We’re thrilled to have you on board. This onboarding course will guide you through our company culture, values, and what to expect in your first week."},
+        {"type": "image", "title": "Meet the Team", "src": "images/team.jpg", "alt": "Group of Horizon Corp employees smiling in a meeting room", "caption": "Meet your new crew at Horizon Corp!"},
+        {"type": "title-text", "title": "Our Mission", "content": "At Horizon Corp, we aim to innovate and inspire through cutting-edge technology and sustainable practices. Your role helps us achieve this every day."},
+        {"type": "video", "title": "Welcome Video", "src": "https://www.youtube.com/embed/dQw4w9WgXcQ", "description": "A quick introduction from our CEO to get you started."},
+        {"type": "image-text", "title": "Your Workspace", "src": "images/workspace.jpg", "alt": "Modern open-plan office with desks and computers", "text": "This is your workspace—modern, open, and designed for collaboration. Feel free to personalize it!"},
+        {"type": "checklist", "title": "First Week Checklist", "items": ["Complete HR paperwork (emailed Day 1)", "Attend team intro meeting (Day 2, 10 AM)", "Set up your workstation (IT support available)", "Join our Slack channels (#general, #team-updates)", "Enjoy the welcome lunch (Day 3)"]},
+        {"type": "quote", "title": "A Word from the CEO", "content": "Teamwork makes the dream work.", "author": "Jane Doe, CEO"}
+    ],
+    "quiz": {
+        "questions": [
+            {"question": "What’s one of Horizon Corp’s core values?", "options": ["Innovation", "Profit First", "Speed Over Quality"], "correct": "Innovation"},
+            {"question": "When is the team intro meeting?", "options": ["Day 1, 9 AM", "Day 2, 10 AM", "Day 3, 1 PM"], "correct": "Day 2, 10 AM"},
+            {"question": "Which Slack channel should you join?", "options": ["#general", "#sales-only", "#executive"], "correct": "#general"}
+        ]
+    }
+}
