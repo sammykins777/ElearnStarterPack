@@ -1,34 +1,189 @@
 {
-    "title": "Employee Onboarding: Welcome to Horizon Corp",
-   "theme": {
-    "primary": "#7C3AED",
-    "secondary": "#A78BFA",
-    "gradientStart": "#1E1E1E",
-    "gradientEnd": "#2D2D2D",
-    "background": "#121212",
-    "text": "#E2E2E2",
-    "correct": "#34D399",
-    "incorrect": "#F87171",
-    "title": "#CDB4DB",
-    "sidebar": "#1A1A1A",
-    "card": "#2D2D2D"
-},
-    "fontSize": "1.25rem",
+    "title": "Remote Work Best Practices",
+    "theme": {
+        "primary": "#4A6670",
+        "secondary": "#9DACB2",
+        "gradientStart": "#F5F7F8",
+        "gradientEnd": "#E8ECEF",
+        "background": "#FFFFFF",
+        "text": "#333F48",
+        "correct": "#558B6E",
+        "incorrect": "#CB4B43",
+        "title": "#4A6670",
+        "sidebar": "#F5F7F8",
+        "card": "#FFFFFF"
+    },
+    "fontSize": "1.125rem",
     "sidebar": true,
     "slides": [
-        {"type": "text", "title": "Welcome to Horizon Corp", "content": "We’re thrilled to have you on board. This onboarding course will guide you through our company culture, values, and what to expect in your first week."},
-        {"type": "image", "title": "Meet the Team", "src": "images/team.jpg", "alt": "Group of Horizon Corp employees smiling in a meeting room", "caption": "Meet your new crew at Horizon Corp!"},
-        {"type": "title-text", "title": "Our Mission", "content": "At Horizon Corp, we aim to innovate and inspire through cutting-edge technology and sustainable practices. Your role helps us achieve this every day."},
-        {"type": "video", "title": "Welcome Video", "src": "https://www.youtube.com/embed/dQw4w9WgXcQ", "description": "A quick introduction from our CEO to get you started."},
-        {"type": "image-text", "title": "Your Workspace", "src": "images/workspace.jpg", "alt": "Modern open-plan office with desks and computers", "text": "This is your workspace—modern, open, and designed for collaboration. Feel free to personalize it!"},
-        {"type": "checklist", "title": "First Week Checklist", "items": ["Complete HR paperwork (emailed Day 1)", "Attend team intro meeting (Day 2, 10 AM)", "Set up your workstation (IT support available)", "Join our Slack channels (#general, #team-updates)", "Enjoy the welcome lunch (Day 3)"]},
-        {"type": "quote", "title": "A Word from the CEO", "content": "Teamwork makes the dream work.", "author": "Jane Doe, CEO"}
+        {
+            "type": "title-text",
+            "title": "Working Remotely: Setting Yourself Up for Success",
+            "content": "Remote work offers flexibility and autonomy, but also requires intentional practices to maintain productivity, wellbeing, and connection with your team. This course will introduce key strategies for remote work success."
+        },
+        {
+            "type": "image-text",
+            "title": "Creating an Effective Workspace",
+            "src": "images/home-office.jpg",
+            "alt": "Well-organized home office with proper ergonomic setup, natural light, and minimal distractions",
+            "text": "Your workspace significantly impacts your productivity and health. Aim for good ergonomics, natural light, and minimal distractions. Separate your work area from relaxation spaces when possible to maintain work-life boundaries."
+        },
+        {
+            "type": "checklist",
+            "title": "Workspace Essentials",
+            "items": [
+                "Comfortable, ergonomic chair",
+                "Desk at proper height",
+                "External monitor at eye level",
+                "Good lighting (natural light when possible)",
+                "Minimal noise and distractions",
+                "Reliable internet connection"
+            ]
+        },
+        {
+            "type": "video",
+            "title": "Home Office Ergonomics",
+            "src": "https://www.youtube.com/embed/F8_ME4VwTiw",
+            "description": "Quick tips for setting up an ergonomic home workspace"
+        },
+        {
+            "type": "title-text",
+            "title": "Establishing Boundaries and Routines",
+            "content": "Without the structure of an office environment, creating personal routines becomes essential. Clear boundaries between work and personal life help prevent burnout and maintain focus."
+        },
+        {
+            "type": "image",
+            "title": "Work-Life Balance",
+            "src": "images/work-life-boundaries.jpg",
+            "alt": "Illustration showing clear separation between work activities and personal life, with a person closing laptop at end of workday",
+            "caption": "Maintaining boundaries helps prevent work from consuming your personal time"
+        },
+        {
+            "type": "checklist",
+            "title": "Routine Best Practices",
+            "items": [
+                "Set consistent working hours",
+                "Take regular breaks (try the Pomodoro Technique)",
+                "Create morning and evening rituals to 'start' and 'end' work",
+                "Schedule regular exercise and movement",
+                "Use 'do not disturb' settings during focus time",
+                "Communicate your availability to colleagues and household members"
+            ]
+        },
+        {
+            "type": "image-text",
+            "title": "Digital Communication Excellence",
+            "src": "images/digital-communication.jpg",
+            "alt": "Person effectively using multiple digital communication tools with organized interface and clear messaging",
+            "text": "Clear communication becomes even more critical in remote settings. Be intentional about your communication style, choose the right tools for different messages, and practice overcommunication to ensure alignment."
+        },
+        {
+            "type": "checklist",
+            "title": "Communication Tools & When to Use Them",
+            "items": [
+                "Email: Formal communications, external contacts, documentation",
+                "Chat (Slack/Teams): Quick questions, informal updates, team banter",
+                "Video calls: Complex discussions, relationship building, brainstorming",
+                "Project management tools: Task tracking, dependencies, deadlines",
+                "Documentation: Processes, decisions, institutional knowledge"
+            ]
+        },
+        {
+            "type": "video",
+            "title": "Effective Virtual Meetings",
+            "src": "https://www.youtube.com/embed/PDDlMw1TK3g",
+            "description": "Tips for productive and engaging virtual meetings"
+        },
+        {
+            "type": "image-text",
+            "title": "Building Remote Relationships",
+            "src": "images/virtual-team-building.jpg",
+            "alt": "Diverse team members connecting virtually with casual conversation and team activities on screen",
+            "text": "Remote work can feel isolating without intentional connection. Make time for casual conversations, virtual team activities, and one-on-one check-ins to build relationships beyond just work tasks."
+        },
+        {
+            "type": "quote",
+            "title": "The Human Element",
+            "content": "The biggest challenge of working from home isn't proving you're working—it's building and maintaining relationships when you aren't in the same physical space.",
+            "author": "Darren Murph, Head of Remote at GitLab"
+        },
+        {
+            "type": "checklist",
+            "title": "Building Remote Connections",
+            "items": [
+                "Schedule virtual coffee chats",
+                "Create dedicated channels for non-work conversations",
+                "Participate in virtual team-building activities",
+                "Share personal updates and milestones",
+                "Acknowledge team members' contributions publicly",
+                "Be present and engaged during video meetings"
+            ]
+        },
+        {
+            "type": "image",
+            "title": "Wellbeing and Self-Care",
+            "src": "images/remote-wellbeing.jpg",
+            "alt": "Person taking a mindful break from computer, stretching, with healthy snack and water nearby",
+            "caption": "Regular self-care is essential for sustainable remote work"
+        },
+        {
+            "type": "text",
+            "title": "Preventing Burnout",
+            "content": "Remote workers often struggle with disconnecting and may work longer hours than office-based colleagues. Be proactive about your wellbeing by scheduling breaks, movement, and truly disconnecting after hours. Remember that consistency and sustainability are more important than occasional bursts of productivity."
+        }
     ],
     "quiz": {
         "questions": [
-            {"question": "What’s one of Horizon Corp’s core values?", "options": ["Innovation", "Profit First", "Speed Over Quality"], "correct": "Innovation"},
-            {"question": "When is the team intro meeting?", "options": ["Day 1, 9 AM", "Day 2, 10 AM", "Day 3, 1 PM"], "correct": "Day 2, 10 AM"},
-            {"question": "Which Slack channel should you join?", "options": ["#general", "#sales-only", "#executive"], "correct": "#general"}
+            {
+                "question": "Which of the following is most important when setting up a home workspace?",
+                "options": [
+                    "Having the latest technology",
+                    "Creating an ergonomic setup that prevents physical strain",
+                    "Making it look impressive for video calls",
+                    "Being close to your kitchen"
+                ],
+                "correct": "Creating an ergonomic setup that prevents physical strain"
+            },
+            {
+                "question": "What is the Pomodoro Technique mentioned in the course?",
+                "options": [
+                    "A way to organize your email inbox",
+                    "A video conferencing platform",
+                    "A time management method using focused work periods followed by short breaks",
+                    "A team-building exercise for remote teams"
+                ],
+                "correct": "A time management method using focused work periods followed by short breaks"
+            },
+            {
+                "question": "Which communication tool is best for complex discussions and relationship building?",
+                "options": [
+                    "Email",
+                    "Chat applications",
+                    "Video calls",
+                    "Project management tools"
+                ],
+                "correct": "Video calls"
+            },
+            {
+                "question": "What is one effective way to establish boundaries between work and personal life?",
+                "options": [
+                    "Always being available to respond to messages",
+                    "Working from your bed or couch",
+                    "Creating consistent start and end rituals for your workday",
+                    "Mixing household chores with work tasks throughout the day"
+                ],
+                "correct": "Creating consistent start and end rituals for your workday"
+            },
+            {
+                "question": "According to the course, why is it important to schedule casual interactions with colleagues?",
+                "options": [
+                    "To ensure everyone is working their required hours",
+                    "To monitor team productivity",
+                    "To build relationships and combat isolation",
+                    "To replace formal meetings"
+                ],
+                "correct": "To build relationships and combat isolation"
+            }
         ]
     }
 }
